@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#174f3b">
+  <title>Puppy Show — Frisbee Catch</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" width="1600" height="1000" aria-label="Puppy Show frisbee game"></canvas>
+    <div id="rotate">Rotate your phone to landscape to play.</div>
+    <button id="pause" aria-label="Pause">Ⅱ</button>
+    <button id="jump">JUMP</button>
+    <section id="results" hidden>
+      <h1>Great Show!</h1><p id="resultText"></p><button id="again">Play Again</button>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
