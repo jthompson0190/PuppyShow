@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#168dc8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Puppy Dinner">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+<title>Puppy Show Dinner Challenge</title>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <button class="nav-btn" id="homeBtn" aria-label="Dinner challenge">🐾</button>
+    <div class="brand"><span>PUPPY SHOW</span><strong>Dinner Challenge</strong></div>
+    <button class="nav-btn" id="weekBtn" aria-label="Weekly progress">🏆</button>
+  </header>
+
+  <main>
+    <section id="homeScreen" class="screen active">
+      <div class="arena">
+        <img class="bg" src="assets/arena.webp" alt="">
+        <div class="shade"></div>
+        <div id="puppy" class="puppy idle" aria-hidden="true"></div>
+        <div class="hero-card" id="preDinnerCard">
+          <div class="ribbon">Tonight's Main Event</div>
+          <h1>Ready for the<br><em>Dinner Show?</em></h1>
+          <p>Cheeseball is ready to cheer!</p>
+          <button id="startBtn" class="mega-btn"><span>⭐</span> START DINNER! <span>⭐</span></button>
+        </div>
+        <div class="timer-card hidden" id="timerCard">
+          <div class="round-label" id="roundLabel">ROUND 1 • DINNER TIME</div>
+          <div id="timer" class="timer">30:00</div>
+          <div class="progress"><div id="progressFill"></div><i class="mark m1">🍽️</i><i class="mark m2">🥤</i><i class="mark m3">🏆</i></div>
+          <div id="encouragement" class="encouragement">Great eating! Cheeseball is cheering for you!</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="weekScreen" class="screen">
+      <div class="week-wrap">
+        <div class="week-title"><span>🏆</span><div><small>PUPPY SHOW</small><h1>Weekly Ribbon Race</h1></div></div>
+        <div class="reward-card">
+          <div class="icecream">🍦</div>
+          <div class="reward-copy"><small>ICE CREAM REWARD</small><strong><span id="weekScore">0</span> / <span id="goalScore">500</span> points</strong><div class="goalbar"><b id="goalFill"></b></div><p id="goalMessage">Earn ribbons at dinner to fill the sundae meter!</p></div>
+        </div>
+        <div id="dayGrid" class="day-grid"></div>
+        <div class="stats"><div><strong id="dinnersCount">0</strong><span>Dinners</span></div><div><strong id="bestScore">0</strong><span>Best Score</span></div><div><strong id="avgScore">0</strong><span>Average</span></div></div>
+        <button id="settingsBtn" class="parent-link">Parent settings</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+ <div class="modal-card" id="modalCard"></div>
+</div>
+<div id="confetti" class="confetti"></div>
+<script src="app.js"></script>
+</body>
+</html>
